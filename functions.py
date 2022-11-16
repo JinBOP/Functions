@@ -5,7 +5,8 @@
 UserInput = input("What number to convert? ")
 print(UserInput)
 # choose starting unit
-
+InputUnit = input("What starting unit? ")
+print(InputUnit)
 # choose ending unit
 
 # conversion calculation
