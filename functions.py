@@ -14,7 +14,11 @@ print(InputUnit)
 # convert in to mm
 if(InputUnit == 'in'):
     Output = UserInput * 25.4
+    OutputUnit = "in"
 elif(InputUnit == 'mm'):
     Output = UserInput / 25.4
+    OutputUnit = "mm"
+else:
+    print("Not a valid Unit!")
 # display results
-print(Output)
+print(Output, OutputUnit)
