@@ -5,10 +5,11 @@
 UserInput = input("What number to convert? ")
 print(UserInput)
 # choose starting unit
-InputUnit = input("What starting unit? ")
+InputUnit = input("In what Units? ")
 print(InputUnit)
 # choose ending unit
-
+OutputUnit = input("Convert to what Units? ")
+print(OutputUnit)
 # conversion calculation
 
 # output of new length
