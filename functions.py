@@ -9,6 +9,7 @@ valid_data = True
 
 def user_parser(user_input):
     global valid_data
+    valid_data = True
     # Separate the number from unit
     values = user_input.rsplit(" ")
     
@@ -29,13 +30,23 @@ def user_parser(user_input):
     return number,unit, valid_data
 
 
-while True:
-    user_input = input("number and unit to convert ")
-    user_number, user_unit, valid_data = user_parser(user_input)
-    # check if there are invalid messages
-    if valid_data:
-        print("User number", user_number)
-        print("User unit", user_unit)
+while True: #continue program until user exits
+    while True: #check for valid data
+        user_input = input("number and unit to convert ")
+        user_number, user_unit, valid_data = user_parser(user_input)
+        # check if there are invalid messages
+        if valid_data:
+            print("User number", user_number)
+            print("User unit", user_unit)
+            break
+    #perform calculations
+
+
+
+
+
+
+
 # while True:
 #   user_number = input("What number to convert? ")
 #   if user_number.isdigit():
