@@ -40,33 +40,13 @@ while True: #continue program until user exits
             print("User unit", user_unit)
             break
     #perform calculations
-
-
-
-
-
-
-
-# while True:
-#   user_number = input("What number to convert? ")
-#   if user_number.isdigit():
-#       user_number = float(user_number)
-#       break
-#   else:
-#       print ('please use a number')
-#       user_unit = input("What unit is your number?")
-
-# if(user_unit == 'in'):
-#   #perform in to mm
-#   conv_number = user_number * 25.4
-#   conv_unit = 'mm'
-#   break
-# elif(user_unit == 'mm'):
-#   #perform mm to in
-#   conv_number = user_number / 25.4
-#   conv_unit = 'in'
-#   break
-# else:
-#   print('That is not a valid unit')
+if(user_unit == 'in'):
+  #perform in to mm
+  conv_number = user_number * 25.4
+  conv_unit = 'mm'
+elif(user_unit == 'mm'):
+  #perform mm to in
+  conv_number = user_number / 25.4
+  conv_unit = 'in'
 
 # print(conv_number, conv_unit)
