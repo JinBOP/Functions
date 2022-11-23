@@ -23,7 +23,7 @@ def user_parser(user_input):
     
     unit = values[1]
 
-    if unit != 'in' and unit != 'mm':
+    if unit != 'in' and unit != 'mm' and unit != 'ft':
         print("not a valid unit")
         valid_data = False
 
@@ -36,8 +36,6 @@ while True: #continue program until user exits
         user_number, user_unit, valid_data = user_parser(user_input)
         # check if there are invalid messages
         if valid_data:
-            print("User number", user_number)
-            print("User unit", user_unit)
             break
     #perform calculations
     if(user_unit == 'in'):
@@ -47,5 +45,9 @@ while True: #continue program until user exits
     elif(user_unit == 'mm'):
         #perform mm to in
         conv_number = user_number / 25.4
+        conv_unit = 'in'
+    elif(user_unit == 'ft'):
+        # perform ft to in
+        conv_number = user_number * 12
         conv_unit = 'in'
     print(conv_number, conv_unit)
