@@ -40,13 +40,12 @@ while True: #continue program until user exits
             print("User unit", user_unit)
             break
     #perform calculations
-if(user_unit == 'in'):
-  #perform in to mm
-  conv_number = user_number * 25.4
-  conv_unit = 'mm'
-elif(user_unit == 'mm'):
-  #perform mm to in
-  conv_number = user_number / 25.4
-  conv_unit = 'in'
-
-# print(conv_number, conv_unit)
+    if(user_unit == 'in'):
+        #perform in to mm
+        conv_number = user_number * 25.4
+        conv_unit = 'mm'
+    elif(user_unit == 'mm'):
+        #perform mm to in
+        conv_number = user_number / 25.4
+        conv_unit = 'in'
+    print(conv_number, conv_unit)
