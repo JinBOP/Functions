@@ -29,6 +29,9 @@ def user_parser(user_input):
 
     return number,unit, valid_data
 
+def print_results(user_number, user_unit, conv_number, conv_unit):
+    result = ("{:.2f} {} is equal to {:.2f} {}")
+    print(result.format(user_number, user_unit, conv_number, conv_unit))
 
 while True: #continue program until user exits
     while True: #check for valid data
@@ -50,4 +53,7 @@ while True: #continue program until user exits
         # perform ft to in
         conv_number = user_number * 12
         conv_unit = 'in'
-    print(conv_number, conv_unit)
+    # create a function which prints out the answer formatted to 2 decimal places
+    # give the original number and unit and converted number and unit
+    
+    print_results(user_number, user_unit, conv_number, conv_unit)
