@@ -5,28 +5,37 @@
 # get the unit from the user
 # convert the length to the correct unit
 # output the answer to the user
+valid_data = True
+
 def user_parser(user_input):
-    # Do something
+    global valid_data
     # Separate the number from unit
     values = user_input.rsplit(" ")
-
+    
     number = values[0]
+
     if number.isdigit():
         number = float(number)
     else:
         print("not a valid number")
-
+        valid_data = False
+    
     unit = values[1]
-    if unit != 'in':
+
+    if unit != 'in' and unit != 'mm':
         print("not a valid unit")
-    return number,unit
+        valid_data = False
+
+    return number,unit, valid_data
 
 
 while True:
     user_input = input("number and unit to convert ")
-    user_number, user_unit = user_parser(user_input)
-    print("User number", user_number)
-    print("User unit", user_unit)
+    user_number, user_unit, valid_data = user_parser(user_input)
+    # check if there are invalid messages
+    if valid_data:
+        print("User number", user_number)
+        print("User unit", user_unit)
 # while True:
 #   user_number = input("What number to convert? ")
 #   if user_number.isdigit():
